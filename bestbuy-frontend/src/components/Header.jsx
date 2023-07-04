@@ -1,7 +1,7 @@
 import React from 'react'
-import {MdKeyboardArrowDown, MdSearch} from 'react-icons/md'
+import {MdKeyboardArrowDown, MdOutlineLocalGroceryStore, MdSearch} from 'react-icons/md'
 import {VscAccount} from 'react-icons/vsc'
-import {BiCart, BiHelpCircle} from 'react-icons/bi'
+import { BiHelpCircle} from 'react-icons/bi'
 import styled from "styled-components"
 
 function Header() {
@@ -16,7 +16,7 @@ function Header() {
 
             <HeaderInput>
                 <HeaderInputLogo>
-                    <MdSearch style={{fontSize:"30px",color:"#a3a3a6"}}/>
+                    <MdSearch style={{fontSize:"20px",color:"#a3a3a6"}}/>
                     <Input type='text' placeholder='Search product, brands, categor...'>
                     </Input>
                 </HeaderInputLogo>  
@@ -43,7 +43,7 @@ function Header() {
 
                  <HeaderLogoCart>
                     <span>Cart</span>
-                     <BiCart  style={{fontSize:"40px",fontWeight:"500"}}/>
+                     <MdOutlineLocalGroceryStore style={{fontSize:"20px",fontWeight:"200",color:"orange"}}/>
                      <CartCount><p>0</p></CartCount>
                  </HeaderLogoCart>
 
@@ -67,17 +67,15 @@ const HeaderWrapper = styled.div`
 `
 const HeaderContent = styled.div`
   width:80%;
-   height:80px;
-  // background-color:red;
-
-  display:flex;
+   height:30px;
+display:flex;
   justify-content:space-between;
   align-items:center;
 
 `
 const HeaderLogo = styled.div`
 width:20%;
-height:40px;
+height:20px;
 // background-color:green;
 span{
 
@@ -87,8 +85,8 @@ span{
 
 `
 const HeaderInput =styled.div`
-width:48%;
-height:60px;
+width:80%;
+height:30px;
 // background-color:white;
 display:flex;
 justify-content:space-between;
@@ -101,18 +99,26 @@ width:100%;
 border:none;
 border-radius:2px;
 outline:none;
-font-size:18px;
+font-size:13px;
 font-weight:400;
 color:#a3a3a6;
 `
 
 const Button=styled.button`
-width:20%;
+width:18%;
 text-align:center;
+margin-right:10px;
+padding:10px 0px;
 color:white;
 border:1px solid #a3a3a6;
-border-radius:5px;
-background-color:orange;
+border-radius:2px;
+background-color: rgb(255, 153, 0);
+font-size:8px;
+font-weight:300px;
+&:hover{
+  background-color:orange;
+}
+
 `
 const HeaderInputLogo=styled.label`
 width:75%;
@@ -122,10 +128,11 @@ justify-content:space-between;
 align-items:center;
 border:1px solid #a3a3a6;
 border-radius:5px;
+
 `
 const HeaderDetails=styled.div`
 width:30%;
-height:60px;
+height:30px;
 // background-color:pink;
 display:flex;
 justify-content:space-between;
@@ -136,53 +143,79 @@ align-items:center;
 
 const HeaderAccountInfo=styled.button`
 width:37%;
-height:60px;
+height:30px;
 // background-color:purple;
 display:flex;
+border:none;
 justify-content:space-between;
 align-items:center;
 outline:none;
+
+font-size:10px;
+font-weight:400;
+padding:10px;
+&:hover{
+  color:orange;
+}
+
 span{
-  pading:3px;
-  font-size:18px;
-  marign:3px;
+ 
+  margin:3px;
+
 }
 `
 const HeaderHelper=styled.button`
 width:30%;
-height:60px;
+height:30px;
 // background-color:yellow;
 display:flex;
+margin-left:10px;
+border:none;
+
 justify-content:space-between;
 align-items:center;
+font-size:10px;
+font-weight:400;
+padding:10px;
+&:hover{
+color:orange;
+}
+
 span{
-  padding:3px;
-  font-size:18px;
-  marign:3px;
+
+  margin:3px;
 }
 
 `
 const HeaderLogoCart=styled.div`
 width:30%;
-height:60px;
+height:30px;
 // background-color:brown;
 display:flex;
 justify-content:center;
 align-items:center;
+font-size:10px;
+font-weight:400;
+padding:10px;
+&:hover{
+  color:orange;
+  }
 span{
-  pading:3px;
-  font-size:18px;
-  marign:3px;
+  
+  margin:3px;
 }
 
 `
 const CartCount=styled.div`
 width:10%;
 height:20px;
-margin-top:-52px;
+margin-top:-30px;
+margin-left:-3px;
+
 p{
-  font-size:18px;
-  font-weight:400;
+  color:lightgray;
+  font-size:11px;
+  font-weight:200;
 }
 `
 
