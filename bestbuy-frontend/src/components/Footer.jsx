@@ -1,11 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
 import {TbMailFilled} from 'react-icons/tb'
-import {FaWhatsapp} from 'react-icons/fa'
-import {BsTelephone}from 'react-icons/bs'
+import { FaWhatsapp} from 'react-icons/fa'
+import { BsInstagram, BsTelephone, BsTwitter, BsYoutube}from 'react-icons/bs'
 import {Link} from "react-router-dom"
-import {AiOutlineApple} from "react-icons/ai"
-import {AiOutlineGoogle} from "react-icons/ai"
+import {AiOutlineAndroid, AiOutlineApple} from "react-icons/ai"
+
+import './Footer.css'
+import { BiLogoFacebook, BiLogoInstagram, BiLogoTwitter, BiLogoYoutube } from 'react-icons/bi'
+
 
 function Footer() {
   return (
@@ -159,29 +162,43 @@ function Footer() {
                <DownloadOnDiv>
                    <DownLoadWithApple>
                        <AppleInfo>
-                         <AiOutlineApple style={{fontSize:"12px"}}/> 
+                         <AiOutlineApple style={{fontSize:"30px",fontWeight:"500"}}/> 
                         <Text>
-                        <p>Download on</p>
-                        <h4>Apple store</h4>
+                        <span>Download on</span> 
+                        <Span>Apple store</Span>
                        </Text> 
                        </AppleInfo>
-                       <GoogleInfo>
-                         <AiOutlineGoogle style={{fontSize:"12px"}}/>
-                       <Text>
-                        <p>Download on</p>
-                        <h4>Apple store</h4>
+                       <AppleInfo>
+                         <AiOutlineAndroid style={{fontSize:"30px",fontWeight:"500"}}/> 
+                        <Text>
+                        <span>Download on</span>
+                        <Span>Apple store</Span>
                        </Text> 
-                       </GoogleInfo>
-                      
+                       </AppleInfo>
+                       
                    </DownLoadWithApple>
+                   <ConnectWithUs>
+                       <ConnectText>
+                         <p>Connect with us</p>
+                         </ConnectText>
+                         <ReactIcons>
+                            <MessageLogo>
+                              <BiLogoFacebook className='facebook'/>
+                            </MessageLogo>
+                            <MessageLogo>
+                               <BiLogoYoutube className='youtube'/>
+                            </MessageLogo>
+                            <MessageLogo>
+                              <BiLogoTwitter className="twitter"/>
+                            </MessageLogo>
+                            <MessageLogo>
+                              <BiLogoInstagram className='instagram'/>
+                            </MessageLogo>
+                         </ReactIcons>
+                       </ConnectWithUs>
                </DownloadOnDiv>
              </FooterTitleDiv>
-             {/* <FooterItems>
-                  
-                  
-
-               </FooterItems> */}
-      </FooterContentInfo5>
+         </FooterContentInfo5>
       </FooterContainer>
     </FooterWrapper>
     </Foota>
@@ -418,24 +435,31 @@ const DownloadOnDiv = styled.div`
 width:100%;
 height:80px;
 background-color:yellow;
+
 display:flex;
-justify-content:center;
+flex-direction:column;
+justify-content:space-between;
 align-items:center;
+
 `
 const DownLoadWithApple = styled.div`
 width:100%;
 color:white;
-height:50px;
+height:40px;
 background-color:lightyellow;
 display:flex;
 justify-content:space-between;
 align-items:center;
 `
 const Text = styled.div`
-width:70px;
-font-size:12px;
+width:100px;
+font-size:10px;
+font-weight:400;
 margin-left:20px;
 color:black;
+display:flex;
+flex-direction:column;
+align-items:center;
 background-color:Navy;
 `
 const FooterTitleDiv= styled.div`
@@ -447,15 +471,52 @@ span{
 }
 `
 const AppleInfo = styled.div`
-width:40%;
-height:25px;
-background:red;
+width:48%;
+height:30px;
+background:black;
 display:flex;
 justify-content:center;
+align-items:center;
 margin-top:-29px;
+border:1px solid black;
+border-radius:2px;
+
 `
-const GoogleInfo = styled.div`
-width:30%;
-height:25px;
+const Span = styled.span`
+font-size:12px;
+color:lightgray;
+light-height:1.2;
+`
+const ConnectWithUs = styled.div`
+width:100%;
+height:80px;
+background:black;
+margin-top:30px;
+color:white;
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+align-items:center;
+
+`
+const ConnectText = styled.div`
+width:100%;
+height:40px;
 background:pink;
+font-size:18px;
+
+
+
 `
+const ReactIcons = styled.div`
+width:100%;
+height:40px;
+background:orange;
+display:flex;
+justify-content:flex-start;
+
+
+
+
+`
+

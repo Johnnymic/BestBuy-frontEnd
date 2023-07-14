@@ -1,0 +1,60 @@
+.facebook{
+    color:black;
+    border-radius:50% ;
+    font-size: 20px;
+    font-weight: 100;
+    margin: 3px;
+}
+
+.facebook:hover{
+    color:blue ;
+    background-color:white;
+
+}
+
+ .youtube{
+     color:red;
+     border-radius:50% ;
+    font-size: 21px;
+    font-weight: 100;
+    margin: 3px;
+
+ }
+
+ .youtube:hover{
+    color:blue ;
+    background-color:white;
+}  
+
+.instagram{
+    color:rgb(48, 152, 237);
+     border-radius:50% ;
+    font-size: 20px;
+    font-weight: 100;
+    margin: 3px;
+
+
+}
+.instagram:hover{
+    color:purple;
+     border-radius:50% ;
+    font-size: 20px;
+    font-weight: 100;
+    margin: 3px;
+
+
+}
+
+
+.twitter{
+    color:rgb(48, 152, 237);
+     border-radius:50% ;
+    font-size: 21px;
+    font-weight: 100;
+    margin: 3px;
+
+}
+.twitter:hover{
+    color:blue ;
+    background-color:white;
+} 
